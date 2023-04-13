@@ -1,0 +1,126 @@
+.navContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.771);
+  z-index: 100;
+}
+
+.listTabs {
+  display: flex;
+}
+
+.listTabs > * {
+  width: 5rem;
+  height: 3rem;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listTabs > *:hover {
+  font-weight: 500;
+  transition: 300ms;
+  filter: drop-shadow(6px 10px 10px rgba(255, 254, 254, 0.899));
+}
+
+.tabItem1 {
+  line-height: 0.8;
+  border-top: solid white;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.tabItem1Active::before {
+  border-right: 2px solid white;
+  top: -2px;
+  right: -14px;
+  transform: skew(25deg);
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 8px 6px 0 0;
+  width: 50px;
+  top: 0;
+  z-index: 10;
+}
+.tabItem1::after {
+  border-left: 2px solid white;
+  transform: skew(-25deg);
+  left: -14px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 6px 8px 0 0;
+  width: 50px;
+  top: 0;
+}
+
+.tabItem2 {
+  line-height: 0.8;
+  border-top: solid white;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.tabItem2Right::before {
+  border-right: 2px solid white;
+  top: -2px;
+  right: -14px;
+  transform: skew(25deg);
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 8px 6px 0 0;
+  width: 50px;
+  top: 0;
+  z-index: 10;
+}
+.tabItem2Active::after {
+  border-left: 2px solid white;
+  transform: skew(-25deg);
+  left: -14px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 6px 8px 0 0;
+  width: 50px;
+  top: 0;
+}
+
+.tabItem3 {
+  line-height: 0.8;
+  border-top: solid white;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.tabItem3::before {
+  border-right: 2px solid white;
+  top: -2px;
+  right: -14px;
+  transform: skew(25deg);
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 8px 6px 0 0;
+  width: 50px;
+  top: 0;
+}
+.tabItem3Active::after {
+  border-left: 2px solid white;
+  transform: skew(-25deg);
+  left: -14px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 6px 8px 0 0;
+  width: 50px;
+  top: 0;
+}
