@@ -5,6 +5,8 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 2rem;
+  background-color: #23242d;
+  color: #f0f0f3;
   border-bottom: 1px solid rgba(255, 255, 255, 0.771);
   z-index: 100;
 }
@@ -24,7 +26,8 @@
 .listTabs > *:hover {
   font-weight: 500;
   transition: 300ms;
-  filter: drop-shadow(6px 10px 10px rgba(255, 254, 254, 0.899));
+  filter: drop-shadow(6px 10px 19px rgba(255, 254, 254, 0.862));
+  color: #12efc8;
 }
 
 .tabItem1 {

@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <nav className={style.navContainer}>
-      <h2>Logo</h2>
+      <h2 className={style.logo}>Logo</h2>
 
       <ul className={style.listTabs}>
         <li

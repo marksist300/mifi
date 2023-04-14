@@ -1,10 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import NavBar from "@/components/NavBar/NavBar";
+import NavBar from "@/scenes/NavBar/NavBar";
 const inter = Inter({ subsets: ["latin"] });
+import { Box, CssBaseline } from "@mui/material";
+import { themeSettings } from "@/theme";
+import { ThemeProvider, useTheme } from "@emotion/react";
+import { createTheme } from "@mui/material";
+import { useMemo } from "react";
 
 export default function Home() {
+  const theme = useMemo(() => createTheme(themeSettings), []);
+  const { palette } = themeSettings;
   return (
     <>
       <Head>
@@ -15,9 +22,12 @@ export default function Home() {
           content="width=device-width, initial-scale=1 maximum-scale=1"
         />
       </Head>
-      <main>
-        <NavBar />
-      </main>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <main>
+          <NavBar />
+        </main>
+      </ThemeProvider>
     </>
   );
 }
