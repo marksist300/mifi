@@ -29,7 +29,7 @@
 
 .tabItem1 {
   line-height: 0.8;
-  border-top: solid white;
+  border-top: 1px solid white;
   border-radius: 3px 3px 0 0;
   position: relative;
   cursor: pointer;
@@ -62,7 +62,7 @@
 
 .tabItem2 {
   line-height: 0.8;
-  border-top: solid white;
+  border-top: 1px solid white;
   border-radius: 3px 3px 0 0;
   position: relative;
   cursor: pointer;
@@ -95,7 +95,7 @@
 
 .tabItem3 {
   line-height: 0.8;
-  border-top: solid white;
+  border-top: 1px solid white;
   border-radius: 3px 3px 0 0;
   position: relative;
   cursor: pointer;
