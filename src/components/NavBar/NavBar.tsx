@@ -1,30 +1,40 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import style from "./navBar.module.css";
 
 const NavBar = () => {
+  const params = useRouter();
   const [activeTab1, setActiveTab1] = useState(true);
   const [activeTab2, setActiveTab2] = useState(false);
   const [activeTab3, setActiveTab3] = useState(false);
-  const setTab = (tabNum: number) => {
-    if (tabNum === 1) {
-      setActiveTab1(true);
-      setActiveTab2(false);
-      setActiveTab3(false);
-    } else if (tabNum === 2) {
+
+  useEffect(() => {
+    const url = params.pathname.split("/");
+    if (url[1] === "stocks") {
       setActiveTab1(false);
       setActiveTab3(false);
       setActiveTab2(true);
-    } else if (tabNum === 3) {
+    } else if (url[1] === "savings") {
       setActiveTab1(false);
       setActiveTab2(false);
       setActiveTab3(true);
+    } else {
+      setActiveTab1(true);
+      setActiveTab2(false);
+      setActiveTab3(false);
     }
-  };
+  }, [params.pathname]);
 
   return (
     <nav className={style.navContainer}>
-      <h2 className={style.logo}>Logo</h2>
+      <h2
+        className={style.logo}
+        onClick={() => {
+          params.push("/");
+        }}
+      >
+        MyFi
+      </h2>
 
       <ul className={style.listTabs}>
         <li
@@ -33,11 +43,11 @@ const NavBar = () => {
               ? `${style.tabItem1Active} ${style.tabItem1}`
               : style.tabItem1
           }
-          onClick={e => {
-            setTab(1);
+          onClick={() => {
+            params.push("/dashboard");
           }}
         >
-          Tab1
+          Dashboard
         </li>
         <li
           className={
@@ -47,11 +57,11 @@ const NavBar = () => {
               ? `${style.tabItem2} ${style.tabItem2Right}`
               : `${style.tabItem2Active} ${style.tabItem2}`
           }
-          onClick={e => {
-            setTab(2);
+          onClick={() => {
+            params.push("/stocks");
           }}
         >
-          Tab2
+          Stocks
         </li>
         <li
           className={
@@ -59,11 +69,11 @@ const NavBar = () => {
               ? `${style.tabItem3Active} ${style.tabItem3}`
               : style.tabItem3
           }
-          onClick={e => {
-            setTab(3);
+          onClick={() => {
+            params.push("/savings");
           }}
         >
-          Tab3
+          Savings
         </li>
       </ul>
     </nav>
