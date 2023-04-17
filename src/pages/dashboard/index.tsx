@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Gridbox from "@/components/Gridbox/Gridbox";
+import Gridrow1 from "@/components/GridRows/Gridrow1";
+import Gridrow2 from "@/components/GridRows/Gridrow2";
+import Gridrow3 from "@/components/GridRows/Gridrow3";
 
 const gridTemplateLG = `
   "a b c"
@@ -69,16 +72,9 @@ const dashboard: NextPage = () => {
             }
       }
     >
-      <Gridbox gridArea="a" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="b" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="c" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="d" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="e" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="f" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="g" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="h" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="i" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
-      <Gridbox gridArea="j" bgcolor="#FFF" borderRadius=".4rem"></Gridbox>
+      <Gridrow1 />
+      <Gridrow2 />
+      <Gridrow3 />
     </Box>
   );
 };
