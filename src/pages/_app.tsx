@@ -1,5 +1,5 @@
 import Layout from "@/Layout";
-import { store } from "@/app/store";
+import { store } from "@/appState/store";
 import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
 

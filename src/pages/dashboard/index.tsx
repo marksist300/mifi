@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import Gridbox from "@/components/Gridbox/Gridbox";
 import Gridrow1 from "@/components/GridRows/Gridrow1";
 import Gridrow2 from "@/components/GridRows/Gridrow2";
 import Gridrow3 from "@/components/GridRows/Gridrow3";
 
+import type { NextPage } from "next";
 const gridTemplateLG = `
   "a b c"
   "a b c"

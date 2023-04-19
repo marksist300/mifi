@@ -1,10 +1,14 @@
-import { apiSlice } from "@/app/apiSlice";
+import { apiSlice } from "@/appState/apiSlice";
 
 export const stocksApiSlice = apiSlice.injectEndpoints({
-  endpoints: build => ({
-    getStocks: build.query({
-      query: () => "",
+  endpoints: builder => ({
+    getStocks: builder.query({
+      query: () => ({
+        url: "/api/stocks",
+      }),
       providesTags: ["stocks"],
     }),
   }),
 });
+
+export const { useGetStocksQuery } = stocksApiSlice;

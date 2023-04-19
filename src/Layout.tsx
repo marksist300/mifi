@@ -1,8 +1,8 @@
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
 import { themeSettings } from "@/theme";
-import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
 
 const Layout = ({ children }: any) => {
