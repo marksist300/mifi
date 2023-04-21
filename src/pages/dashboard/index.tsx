@@ -1,54 +1,19 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useEffect } from "react";
+
 import { Box, useMediaQuery, useTheme } from "@mui/material";
+
 import Gridrow1 from "@/components/GridRows/Gridrow1";
 import Gridrow2 from "@/components/GridRows/Gridrow2";
 import Gridrow3 from "@/components/GridRows/Gridrow3";
 
-import type { NextPage } from "next";
-const gridTemplateLG = `
-  "a b c"
-  "a b c"
-  "a b f"
-  "d e f"
-  "d e f"
-  "d h i"
-  "g h i"
-  "g h j"
-  "g h j"
-`;
+import { gridTemplateLG } from "./gridLayoutUtils";
+import { gridTemplateSM } from "./gridLayoutUtils";
 
-const gridTemplateSM = `
-  "a"
-  "a"
-  "a"
-  "b"
-  "b"
-  "b"
-  "c"
-  "c"
-  "d"
-  "d"
-  "d"
-  "e"
-  "e"
-  "f"
-  "f"
-  "f"
-  "g"
-  "g"
-  "g"
-  "h"
-  "h"
-  "h"
-  "i"
-  "i"
-  "j"
-  "j"
-`;
+import type { NextPage } from "next";
 
 const dashboard: NextPage = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { palette } = useTheme();
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const isOverMediumSizedScreen = useMediaQuery("(min-width: 1200px)");
   return (
     <Box

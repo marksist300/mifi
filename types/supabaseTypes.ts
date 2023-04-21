@@ -7,6 +7,14 @@ export interface Stocks {
   created_at: Date;
 }
 
+export interface UsersStocks {
+  id: number;
+  buy_price: number;
+  purchase_date: Date;
+  quantity_held: number;
+  stock_id: Stocks;
+}
+
 export interface Spending {
   id: number;
   user_id: string;
